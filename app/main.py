@@ -1,5 +1,6 @@
 class Person:
     people = {}
+
     def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
@@ -7,5 +8,4 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
-    # write your code here
-    pass
+    person = [Person(person["name"], person["age"]) for person in people]
